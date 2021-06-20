@@ -1,0 +1,14 @@
+type Query {
+  shoppingCart: ShoppingCart!
+}
+
+extend type Character {
+  chosenQuantity: Int!
+  unitPrice: Int!
+}
+
+type ShoppingCart {
+  id: ID!
+  totalPrice: Int!
+  numActionFigures: Int!
+}
