@@ -65,13 +65,11 @@ const styles = StyleSheet.create({
     position: 'relative',
   },
   badge: {
-    color: '#fff',
     position: 'absolute',
     zIndex: 10,
     left: 24,
     bottom: 20,
     padding: 1,
-    backgroundColor: 'red',
     borderRadius: 20,
     fontSize: 14,
   },

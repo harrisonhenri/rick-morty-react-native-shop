@@ -20,6 +20,7 @@ const Home = () => {
       <FlatList
         data={data?.characters?.results}
         renderItem={({ item }) => <CharacterCard data={item as Character} />}
+        contentContainerStyle={styles.characterList}
       />
     </View>
   );
@@ -30,6 +31,9 @@ export default Home;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    margin: 16,
+    backgroundColor: '#FFFFFF',
+  },
+  characterList: {
+    padding: 16,
   },
 });
