@@ -29,11 +29,13 @@ const CharacterCard: React.FC<Props> = ({ data }) => {
       </View>
       <View style={styles.choseQuantityContainer}>
         <RectButton
+          testID="charactter-remove-btn"
           onPress={onDecreaseChosenQuantity.bind(null, data.id as string)}>
           <Icon name="minus" size={24} color="#3D7199" />
         </RectButton>
         <Text style={styles.choseQuantityText}>{data.chosenQuantity}</Text>
         <RectButton
+          testID="charactter-add-btn"
           onPress={onIncreaseChosenQuantity.bind(null, data.id as string)}>
           <Icon name="plus" size={24} color="#3D7199" />
         </RectButton>
