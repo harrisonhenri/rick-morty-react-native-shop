@@ -15,7 +15,7 @@ const Cart = () => {
     <SafeAreaView style={styles.container}>
       {data?.shoppingCart?.numActionFigures ? (
         <>
-          <View style={styles.content}>
+          <View style={styles.content} testID="fulfilled-cart">
             <Text style={styles.emoji}>🤗</Text>
             <Text
               style={
@@ -29,7 +29,7 @@ const Cart = () => {
         </>
       ) : (
         <>
-          <View style={styles.content}>
+          <View style={styles.content} testID="empty-cart">
             <Text style={styles.emoji}>😢</Text>
             <Text style={styles.title}>Empty cart!</Text>
             <View style={styles.footer}>

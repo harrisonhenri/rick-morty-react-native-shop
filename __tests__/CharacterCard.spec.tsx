@@ -3,10 +3,6 @@ import React from 'react';
 import * as useUpdateChosenQuantityModule from '../src/common/hooks/use-update-chosen-quantity';
 import CharacterCard from '../src/common/components/CharacterCard';
 
-// jest.mock('react-native-gesture-handler', () => {
-//   RectButton: () => <Button title="any_title" onPress={() => {}} />;
-// });
-
 describe('CharacterCard component', () => {
   beforeEach(() => {
     jest
