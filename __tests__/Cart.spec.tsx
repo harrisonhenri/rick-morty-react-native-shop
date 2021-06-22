@@ -1,7 +1,6 @@
 import { fireEvent, render, waitFor } from '@testing-library/react-native';
 import React from 'react';
 import { MockedProvider } from '@apollo/client/testing';
-import * as useUpdateChosenQuantityModule from '../src/common/hooks/use-update-chosen-quantity';
 import Cart from '../src/screens/Cart';
 
 const mockedNavigate = jest.fn();
@@ -11,14 +10,6 @@ jest.mock('@react-navigation/native', () => ({
 }));
 
 describe('Cart component', () => {
-  beforeEach(() => {
-    jest
-      .spyOn(useUpdateChosenQuantityModule, 'useUpdateChosenQuantity')
-      .mockReturnValue({
-        onIncreaseChosenQuantity: jest.fn(),
-        onDecreaseChosenQuantity: jest.fn(),
-      });
-  });
   it('should render with empty cart and navigate on click', async () => {
     const resolvers = {
       Query: {

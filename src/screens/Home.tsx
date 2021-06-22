@@ -9,14 +9,14 @@ const Home = () => {
 
   if (loading) {
     return (
-      <View style={styles.container}>
+      <View testID="progress" style={styles.container}>
         <ActivityIndicator color="#32B768" size="large" />
       </View>
     );
   }
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="container">
       <FlatList
         data={data?.characters?.results}
         renderItem={({ item }) => <CharacterCard data={item as Character} />}
